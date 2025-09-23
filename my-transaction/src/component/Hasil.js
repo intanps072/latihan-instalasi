@@ -1,13 +1,24 @@
-import React, {Component} from "react";
-import {Col} from 'react-bootstrap';
+import React, { Component } from 'react'
+import { Col, ListGroup } from 'react-bootstrap'
 
 export default class Hasil extends Component {
-    render () {
-        return (
-            <Col md={3} mt='2'>
-                <h5><strong>Hasil</strong></h5>
-                <hr/>
-            </Col>
-        )
-    }
+  render() {
+    const { keranjangs } = this.props
+    return (
+      <Col md={3} mt="2">
+        <h5><strong>Keranjang</strong></h5>
+        <hr />
+        {keranjangs.length !== 0 && (
+          <ListGroup variant="flush">
+            {keranjangs.map((menuKeranjang) => (
+              <ListGroup.Item>
+                {menuKeranjang.product.nama}
+              </ListGroup.Item>
+            ))}
+
+          </ListGroup>
+        )}
+      </Col>
+    )
+  }
 }
