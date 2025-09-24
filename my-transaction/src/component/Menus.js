@@ -1,13 +1,12 @@
-import React, {Component} from "react";
+import React from "react";
 import {Col} from 'react-bootstrap';
 import {NumberWithCommas} from '../utils/utils';
 import { Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 
 const Menus = ({menu, masukkeranjang}) => {
     return (
         <Col md={4} xs={6} className = 'mb-4'>
-            <Card className ='shadow' onClick={() => masukkeranjang(menu)} style = {{width : '15rem'}}>
+            <Card className ='shadow' onClick={() => masukkeranjang(menu)} style = {{width : '15rem', height : '15rem'}}>
                 <Card.Img variant = 'top' src={'images/' + menu.category.nama.toLowerCase() + '/' + menu.gambar} />
                 <Card.Body>
                     <Card.Title>{menu.nama}({menu.kode})</Card.Title>
