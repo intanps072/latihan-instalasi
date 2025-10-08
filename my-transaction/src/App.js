@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 // import { Row, Col, Container } from 'react-bootstrap';
 // import { Hasil, ListCategory, Menus, NavbarComp } from './component';
 import { NavbarComp } from './component';
-import { Home, RekapTransaksi, Sukses } from './pages'
+import { Home, RekapTransaksi, Sukses, Stok } from './pages'
 // import { API_URL } from './utils/constants';
 // import axios from 'axios';
 // import swal from 'sweetalert';
@@ -124,6 +124,7 @@ import { Home, RekapTransaksi, Sukses } from './pages'
                         <Route path = "/" component = {Home} exact />
                         <Route path = "/Sukses" component ={Sukses} exact/>
                         <Route path = "/RekapTransaksi" component ={RekapTransaksi} exact/>
+                        <Route path = "/Stok" component ={Stok} exact/>
                       </Switch>
                     </main>
                   </BrowserRouter>
